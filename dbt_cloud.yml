@@ -1,0 +1,16 @@
+version: "1"
+context:
+  active-host: "do547.us1.dbt.com"
+  active-project: "70471823548174"
+projects:
+  - project-name: "analytics-engineering"
+    project-id: "70471823548174"
+    account-name: "NunyaBeesness"
+    account-id: "70471823529524"
+    account-host: "do547.us1.dbt.com"
+    token-name: "cloud-cli-f610"
+    token-value: "dbtu_BXSOTycXFdCjLfB4mVZn9w0gC4fj4Osjg72L8JKQpienEakwUY"
+  
+
+
+
