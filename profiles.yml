@@ -1,0 +1,12 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      threads: 16
+      database: analytics-engineering-lab
+      schema: analytics
+      method: service-account
+      keyfile: C:\Users\natef\.dbt\analytics-engineering-lab-95271296e54a.json
+      location: us
+      dataproc_batch: null
