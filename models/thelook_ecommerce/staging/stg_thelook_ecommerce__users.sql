@@ -17,7 +17,7 @@ renamed as (
       , postal_code as user_postal_code
       , city as user_city
       , country as user_country
-      , traffic_source
+      , traffic_source as user_traffic_source
       , created_at as user_created_date
     
     from source
