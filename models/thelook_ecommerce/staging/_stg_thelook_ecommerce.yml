@@ -14,3 +14,39 @@ models:
           - accepted_values:
               arguments:
                 values: ['Cancelled', 'Complete', 'Processing', 'Returned', 'Shipped']
+  - name: stg_thelook_ecommerce__order_items
+    description: one order item per row. Breaks out orders into individual items.
+    columns:
+      - name: order_item_id
+        description: primary key for the order items table
+        data_tests:
+          - unique
+          - not_null
+      - name: order_id
+        description: foreign key for the orders table
+        data_tests:
+          - relationships:
+              arguments:
+                field: order_id
+                to: ref('stg_thelook_ecommerce__orders')
+      - name: order_item_status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Cancelled', 'Complete', 'Processing', 'Returned', 'Shipped']
+      ## would like to add a singular test for sale_price > 0
+  - name: stg_thelook_ecommerce__users
+    description: one user per row
+    columns:
+      - name: user_id
+        description: primary key for the users table
+        data_tests:
+          - unique
+          - not_null
+      - name: traffic_source
+        description: attributes user acquisition channel
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Search', 'Organic', 'Facebook', 'Display', 'Email']
+      ## add singular testing for email format and age > 0
