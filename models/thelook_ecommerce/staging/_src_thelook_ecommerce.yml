@@ -1,11 +1,62 @@
 sources:
   - name: thelook_ecommerce
     database: bigquery-public-data
+    description: ecommerce data from thelook.com, a fictional online store
     tables:
       - name: distribution_centers
+        description: distribution centers for thelook.com
+        columns:
+          - name: id
+            description: primary key for the distribution centers table
+            data_tests:
+              - unique
+              - not_null
       - name: events
+        description: user events on thelook.com, such as page views and purchases
+        columns:
+          - name: id
+            description: primary key for the events table
+            data_tests:
+              - unique
+              - not_null
       - name: inventory_items
+        description: inventory items for thelook.com
+        columns:
+          - name: id
+            description: primary key for the inventory items table
+            data_tests:
+              - unique
+              - not_null
       - name: order_items
+        description: order items for thelook.com
+        columns:
+          - name: id
+            description: primary key for the order items table
+            data_tests:
+              - unique
+              - not_null
       - name: orders
+        description: orders for thelook.com
+        columns:
+          - name: id
+            description: primary key for the orders table
+            data_tests:
+              - unique
+              - not_null
       - name: products
+        description: products for thelook.com
+        columns:
+          - name: id
+            description: primary key for the products table
+            data_tests:
+              - unique
+              - not_null
       - name: users
+        description: users for thelook.com
+        columns:
+          - name: id
+            description: primary key for the users table
+            data_tests:
+              - unique
+              - not_null
+      ## add freshness tests for all tables
