@@ -6,9 +6,9 @@
 
 --{{template_example() }}
 
---{{ union_tables_by_prefix(database='dbt-tutorial', schema='dbt_learn_jinja', prefix='orders__') }}
+/*{{ union_tables_by_prefix(database='dbt-tutorial', schema='dbt_learn_jinja', prefix='orders__') }}*/
 
-{% set database = target.database %}
+/*{% set database = target.database %}
 {% set schema = target.schema %}
 
 select
@@ -22,3 +22,4 @@ from {{ database }}.information_schema.tables
 where table_schema = upper( '{{ schema }}' )
 and date(last_altered) <= date(dateadd('day', -1, current_date))
 order by last_altered desc
+*/
