@@ -1,5 +1,6 @@
 {{ config( 
-    materialized='table'
+    materialized='table',
+    static_analysis='unsafe'
 ) }}
 
 {{ dbt_utils.date_spine(
