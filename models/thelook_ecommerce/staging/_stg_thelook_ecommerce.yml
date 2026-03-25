@@ -50,3 +50,11 @@ models:
               arguments:
                 values: ['Search', 'Organic', 'Facebook', 'Display', 'Email']
       ## add singular testing for email format and age > 0
+  - name: stg_thelook_ecommerce__products
+    description: one product per row
+    columns:
+      - name: product_id
+        description: primary key for the products table
+        data_tests:
+          - unique
+          - not_null
